@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Input from '../components/Input';
 import video from "./video2.mp4"; 
 import { Header } from '../components/Header';
+import { Button } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css"; 
+
 
 function convertingMoney(rate, amount) {
   return (rate * amount).toFixed(2); // Format to two decimal places
@@ -50,14 +53,15 @@ export function Currency() {
   };
 
   return (
-    <div className="currency-container">
+    <div>
       <Header />
-      <div className="video-container">
+      <div className="video-container currency-container">
         <video autoPlay loop muted className="video2">
           <source src={video} type="video/mp4"/>
         </video>
       </div>
-      <div className="content-container">
+      <div className="content-container currency-container">
+        <form>
         <label htmlFor="toCurrency">To Currency:</label>
         <select name="toCurrency" id="toCurrency" value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
           {currencyOptions.map(option => (
@@ -71,8 +75,10 @@ export function Currency() {
           ))}
         </select>
         <Input type="Number" value={amount} onChange={(e) => setAmount(e.target.value)} />
-        <button onClick={handleCalculate}>Calculate</button>
+        {/* {<button onClick={handleCalculate}>Calculate</button> */}
+        <Button onClick={handleCalculate}>Calculate</Button>
         {showResult && <p>Result: {converted}</p>}
+        </form>
       </div>
     </div>
   );

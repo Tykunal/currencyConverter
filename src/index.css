@@ -37,38 +37,80 @@ h2 {
 .middle {
   background-color: #E2DFD0;
 }
-/* Video 2 Inside Currency */
+
 .currency-container {
   position: relative;
+  /* padding: 50px; */
+  /* width: 100%; */
+  /* height: 100vh; Make the container fill the entire viewport */
 }
 
 .video-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 800%;
+  height: 100%;
   overflow: hidden;
-  object-fit: cover;
-  z-index: -1; /* Ensure the video stays behind the content */
+  z-index: -1;
 }
 
 .video2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
   transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
 }
 
-.content-container {
-  z-index: 1; /* Ensure the content stays above the video */
-  /* Add any additional styling for the content container */
+form {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  /* padding: 20px; */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* padding: 50px; */
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.content-container {
-  color:white;
+label {
+  color: white;
+  font-weight: bold;
 }
+
+select, input, button {
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+} */
+
+/* button:hover {
+  background-color: #0056b3;
+} */
+
+p {
+  color: white;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Add any additional styling for the form elements */
