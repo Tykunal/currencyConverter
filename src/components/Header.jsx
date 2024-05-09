@@ -16,7 +16,7 @@ export function Header() {
           <Nav className="me-auto">
           <Nav.Link as={Link} to="/">Home</Nav.Link>
           <Nav.Link as={Link} to="/currency">Convert</Nav.Link>
-            <NavDropdown title="Connect" id="basic-nav-dropdown">
+            <NavDropdown title="Connect With Me" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://www.linkedin.com/in/tykunal/">LinkedIn</NavDropdown.Item>
               <NavDropdown.Item href="https://www.twitter.com/tykunal07">
                 Twitter
