@@ -14,7 +14,6 @@ import { Home } from "./pages/Home";
 import {Currency} from "./pages/Currency"
 // import CurrencyConverter from './components/CurrencyConverter';
 
-
 const router = createBrowserRouter([
   {
   path:"/",

@@ -67,17 +67,18 @@ export function Currency() {
           {currencyOptions.map(option => (
             <option key={option} value={option}>{option}</option>
           ))}
-        </select> <br />
+        </select>
         <label htmlFor="fromCurrency">From Currency:</label>
         <select name="fromCurrency" id="fromCurrency" value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
           {currencyOptions.map(option => (
             <option key={option} value={option}>{option}</option>
           ))}
         </select>
+        <label htmlFor="amount">Amount:</label>
         <Input type="Number" value={amount} onChange={(e) => setAmount(e.target.value)} />
         {/* {<button onClick={handleCalculate}>Calculate</button> */}
-        <Button onClick={handleCalculate}>Calculate</Button>
-        {showResult && <p>Result: {converted}</p>}
+        <Button id="btn" onClick={handleCalculate}>Calculate</Button>
+        {showResult && <p className="result">Result: {converted}</p>}
         </form>
       </div>
     </div>

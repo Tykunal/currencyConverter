@@ -6,9 +6,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from "react-router-dom";
 
+
 export function Header() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary navbar-custom">
       <Container>
         <Navbar.Brand>C*2</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

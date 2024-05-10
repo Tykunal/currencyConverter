@@ -1,6 +1,7 @@
 import React from "react";
 import { Header } from "../components/Header";
 import video from ".//video.mp4";
+import { Footer } from "../components/footer";
 
 export function Home() {
   return (
@@ -11,12 +12,12 @@ export function Home() {
             <source src={video} type="video/mp4"/>
         </video>
         <div className="top-content">
-          <h1>Currency Converter</h1>
+          <h1 style={{ fontSize: "5rem" }}>Welcome to Our Currency Converter! <br /> Because Math is Hard.</h1>
         </div>
       </div>
 
       <div className="middle">
-        <h2>Welcome to Our Currency Converter! Because Math is Hard.</h2>
+        <h2>About</h2>
         <p>So, you've found yourself in need of converting those pesky currencies, huh? Don't worry, we've got you covered! Our currency converter is like that trusty sidekick who's always there to help you navigate the confusing world of international finance.
 <br />
 
@@ -32,11 +33,13 @@ export function Home() {
 So there you have it, folks! Whether you're a seasoned traveler or just dipping your toes into the world of foreign exchange, our currency converter is here to make your life a whole lot easier. Say goodbye to currency confusion and hello to hassle-free conversions!</p>
       </div>
       <div className="below">
-        <h2>About</h2>
-        <p>Got questions, feedback, or just want to say hi? I'm all ears! <br /> I am a B. Tech Student at 
-        Abes Institute of Technology.</p>
+        <h2>Connect</h2>
+        <p className="connectCenter">Got questions, feedback, or just want to say hi? I'm all ears!<br /> I am a computer science and engineering student with a passion for innovation.
+        Let's combine our skills and <span class="extra">create</span> something <span class="extra">extraordinary</span>.
+        </p>
       </div>
       {/* footer */}
+      <Footer />
     </div>
   );
 }

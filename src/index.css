@@ -1,10 +1,27 @@
-*{
+body{
   margin: 0;
   padding: 0;
 }
+h1 {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 h2 {
   text-align: center;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
+
+/* Navbar */
+
+.navbar-custom {
+  background-color: #09467c;
+}
+
+/* Other components */
+
 .home-container {
   position: relative;
 }
@@ -35,14 +52,18 @@ h2 {
   color: white;
 }
 .middle {
-  background-color: #E2DFD0;
+  background-color: #f0f0f0; /* Light gray background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for 3D effect */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Add rounded corners */
 }
+
 
 .currency-container {
   position: relative;
   /* padding: 50px; */
-  /* width: 100%; */
-  /* height: 100vh; Make the container fill the entire viewport */
+  width: 30%;
+  /* height: 100vh; */
 }
 
 .video-container {
@@ -75,20 +96,39 @@ form {
   /* padding: 20px; */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  /* padding: 50px; */
+  padding: 50px;
   margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 label {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
-select, input, button {
-  margin: 10px 0;
+select{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width:200px;
+  padding: 8px;
+}
+#fromCurrency {
+  margin: 8px;
+}
+#toCurrency {
+  margin: 8px;
+}
+#btn {
+  margin: 6px 0px 0px;
+}
+input, button {
+  /* margin: 50px; */
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -106,11 +146,35 @@ select, input, button {
 /* button:hover {
   background-color: #0056b3;
 } */
-
-p {
-  color: white;
-  margin-top: 10px;
-  font-weight: bold;
+.result {
+  color:black;
 }
 
-/* Add any additional styling for the form elements */
+p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.connectCenter {
+  text-align:center;
+}
+.below {
+  background-color: #ffffff; /* White background */
+  padding: 20px; /* Add padding for spacing */
+}
+.footer-icon {
+  text-align: center;
+  background-color: #09467c;
+  font-size: 24px;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.copyright {
+  font-size: 18px;
+}
+.icon {
+  padding: 4px;
+}
