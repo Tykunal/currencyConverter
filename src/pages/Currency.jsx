@@ -25,10 +25,12 @@ export function Currency() {
           'https://open.er-api.com/v6/latest'
         );
         const data = await response.json();
+        // console.log(data);
         const options = Object.keys(data.rates);
+        // console.log(options);
         setCurrencyOptions(options);
-        setToCurrency(options[0]); // Set default toCurrency
-        setFromCurrency(options[1]); // Set default fromCurrency
+        setToCurrency(options[0]); 
+        setFromCurrency(options[1]); 
       } catch (error) {
         console.error("Error fetching currency options:", error);
       }
@@ -63,7 +65,7 @@ export function Currency() {
       <div className="content-container currency-container">
         <form>
         <label htmlFor="toCurrency">To Currency:</label>
-        <select name="toCurrency" id="toCurrency" value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
+        <select name="toCurrency" id="toCurrency" value={toCurrency} onChange={(e)=>{setToCurrency(e.target.value)}}>
           {currencyOptions.map(option => (
             <option key={option} value={option}>{option}</option>
           ))}
@@ -78,7 +80,7 @@ export function Currency() {
         <Input type="Number" value={amount} onChange={(e) => setAmount(e.target.value)} />
         {/* {<button onClick={handleCalculate}>Calculate</button> */}
         <Button id="btn" onClick={handleCalculate}>Calculate</Button>
-        {showResult && <p className="result">Result: {converted}</p>}
+        {showResult && <p className="result">Result: {converted} {toCurrency}</p>}
         </form>
       </div>
     </div>
